@@ -1,0 +1,21 @@
+{
+  "name": "test-sqlite-actor",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "bench": "tsx scripts/bench.ts"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240512.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.4",
+    "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "heap-js": "^2.7.1",
+    "sqlite-actor": "^0.1.5"
+  }
+}

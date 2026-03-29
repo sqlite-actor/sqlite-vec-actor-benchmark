@@ -1,0 +1,21 @@
+name = "test-sqlite-actor"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+compatibility_flags = [ "nodejs_compat" ]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = [ "NativeVectorActor", "OSSVectorActor" ]
+
+[[durable_objects.bindings]]
+name = "NATIVE_ACTOR"
+class_name = "NativeVectorActor"
+
+[[durable_objects.bindings]]
+name = "OSS_ACTOR"
+class_name = "OSSVectorActor"
+
+[[rules]]
+type = "CompiledWasm"
+globs = ["**/*.wasm"]
+fallthrough = true
